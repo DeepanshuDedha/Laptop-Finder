@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laptop Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Laptop Finder 🔍</h1>
+
+    <div class="filters">
+      <label>
+        Processor:
+        <select id="processor">
+          <option value="">Any</option>
+          <option value="i5">Intel i5</option>
+          <option value="i7">Intel i7</option>
+          <option value="i9">Intel i9</option>
+          <option value="ryzen5">Ryzen 5</option>
+          <option value="ryzen7">Ryzen 7</option>
+        </select>
+      </label>
+
+      <label>
+        RAM:
+        <select id="ram">
+          <option value="">Any</option>
+          <option value="8">8 GB</option>
+          <option value="16">16 GB</option>
+          <option value="32">32 GB</option>
+        </select>
+      </label>
+
+      <label>
+        Storage:
+        <select id="storage">
+          <option value="">Any</option>
+          <option value="256">256 GB SSD</option>
+          <option value="512">512 GB SSD</option>
+          <option value="1tb">1 TB HDD</option>
+        </select>
+      </label>
+
+      <label>
+        Graphics Card:
+        <select id="graphics">
+          <option value="">Any</option>
+          <option value="integrated">Integrated</option>
+          <option value="gtx1650">NVIDIA GTX 1650</option>
+          <option value="rtx3050">NVIDIA RTX 3050</option>
+          <option value="radeon">AMD Radeon</option>
+        </select>
+      </label>
+
+      <label>
+        Max Price (₹):
+        <input type="number" id="price" placeholder="e.g. 70000" />
+      </label>
+
+      <button onclick="filterLaptops()">🔍 Search</button>
+    </div>
+
+    <button id="compareBtn" onclick="compareLaptops()" style="display:none">🆚 Compare Selected</button>
+    <div id="results" class="results"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
